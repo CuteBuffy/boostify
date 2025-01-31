@@ -5,12 +5,12 @@
   align-items: center;
   justify-content: space-between;
   padding-top: 2rem;
-  padding-bottom: 2rem;
+  padding-bottom: calc(50px + env(safe-area-inset-bottom, 0));
   gap: 40px;
 }
 
 .page__footer {
-  border: 1px solid red;
+  position: fixed;
   bottom: 2rem;
   display: flex;
   align-items: center;
