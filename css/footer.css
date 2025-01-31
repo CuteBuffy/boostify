@@ -3,22 +3,20 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
   padding-top: 2rem;
-  padding-bottom: calc(50px + env(safe-area-inset-bottom, 0));
   gap: 40px;
 }
 
 .page__footer {
-  position: fixed;
   bottom: 2rem;
   display: flex;
   align-items: center;
+  justify-self: flex-end;
   padding: 10px;
+  margin-bottom: 2rem;
   background-color: var(--clr-white);
   border-radius: var(--border-radius15);
   gap: 1rem;
-  margin-bottom: env(safe-area-inset-bottom, 0);
 }
 
 .vertical__line {
