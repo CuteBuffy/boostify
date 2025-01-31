@@ -9,6 +9,7 @@
 
 .page__footer {
   bottom: 2rem;
+  border: 1px solid red;
   display: flex;
   align-items: center;
   justify-self: flex-end;
