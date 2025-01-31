@@ -1,0 +1,107 @@
+.register__page_content {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 350px;
+  gap: 1rem;
+}
+
+.register__page_title {
+  background-color: var(--clr-white);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--border-radius15);
+  gap: 5px;
+}
+
+.register__page_title_main {
+  text-transform: capitalize;
+  font-size: 25px;
+}
+
+.register__page_title_desc {
+  font-size: 15px;
+}
+
+.register__page_registerform {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+  background-color: var(--clr-white);
+  border-radius: var(--border-radius15);
+  padding: 20px;
+}
+
+.register__input {
+  border-radius: 60px;
+  background-color: var(--clr-lightblue);
+  border: none;
+  padding: 15px;
+  width: 100%;
+  font-size: 13px;
+  color: #505050;
+}
+
+.register__input:focus {
+  outline: none;
+  outline: 2px solid #F0F0F0;
+}
+
+.input__container {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.nickname__input_text {
+  text-transform: capitalize;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.password__input_text {
+  text-transform: capitalize;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.input__password_container,
+.input__password_confirm_container {
+  display: flex;
+  position: relative;
+}
+
+.register__hide_password {
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.password__confirm_input_text {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.register__noaccount {
+  align-self: flex-end;
+  width: fit-content;
+  font-size: 12px;
+  color: #2336C6;
+}
+
+.register__register_btn {
+  background-color: none;
+  padding: 14px 10px;
+  border-radius: 60px;
+  border: 1px solid var(--clr-blue);
+  color: var(--clr-blue);
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: capitalize;
+}

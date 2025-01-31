@@ -1,0 +1,43 @@
+.page_wrapper {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  gap: 40px;
+}
+
+.page__footer {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  background-color: var(--clr-white);
+  border-radius: var(--border-radius15);
+  gap: 1rem;
+}
+
+.vertical__line {
+  height: 30px;
+  border-left: 1px solid #5DDBF5;
+}
+
+.footer__other_icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.footer__icon {
+  background-color: #5DDBF5;
+  padding: 0.5rem;
+  border-radius: var(--border-radius10);
+  border: 1px solid #49C7E1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+}
