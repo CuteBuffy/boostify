@@ -56,6 +56,21 @@ button {
   padding: 0 2rem;
 }
 
+.circle__blur {
+  position: absolute;
+}
+
+.circle__blur_left {
+  top: 0;
+  left: 0;
+}
+
+.circle__blur_right {
+  bottom: 0;
+  right: 0;
+  transform: rotate(180deg);
+}
+
 @media (min-width: 475px) {
   .container {
     max-width: 475px;
