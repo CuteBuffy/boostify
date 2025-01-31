@@ -10,7 +10,8 @@
 }
 
 .page__footer {
-  position: sticky;
+  position: fixed;
+  bottom: 2rem;
   display: flex;
   align-items: center;
   padding: 10px;
