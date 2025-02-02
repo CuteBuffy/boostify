@@ -25,6 +25,35 @@ html {
 
 body {
   background-color: var(--clr-lightblue);
+  overflow-x: hidden;
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+body::before,
+body::after {
+  content: "";
+  position: fixed;
+  width: 30rem;
+  height: 30rem;
+  background: radial-gradient(circle, rgba(0, 0, 140, 0.5) 0%, rgba(0, 0, 0, 0) 70%);
+  filter: blur(110px);
+  z-index: -1;
+  pointer-events: none;
+}
+
+body::before {
+  top: 0;
+  left: 0;
+  transform: translate(-50%, -50%);
+}
+
+body::after {
+  bottom: 0;
+  right: 0;
+  transform: translate(50%, 50%);
 }
 
 img,
@@ -56,20 +85,6 @@ button {
   padding: 0 2rem;
 }
 
-.circle__blur {
-  position: absolute;
-}
-
-.circle__blur_left {
-  top: 0;
-  left: 0;
-}
-
-.circle__blur_right {
-  bottom: 0;
-  right: 0;
-  transform: rotate(180deg);
-}
 
 @media (min-width: 475px) {
   .container {
