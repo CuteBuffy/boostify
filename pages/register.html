@@ -25,8 +25,8 @@
           <div class="input__container">
             <p class="password__input_text">пароль</p>
             <div class="input__password_container">
-              <input class="register__input" type="password">
-              <button class="register__hide_password">
+              <input class="register__input" type="password" id="passwordInput">
+              <button class="register__hide_password" id="loginTogglePassword">
                 <img src="../icons/password_hide.svg" alt="">
               </button>
             </div>
@@ -34,8 +34,8 @@
           <div class="input__container">
             <p class="password__confirm_input_text">Повторіть пароль</p>
             <div class="input__password_confirm_container">
-              <input class="register__input" type="password">
-              <button class="register__hide_password">
+              <input class="register__input" type="password" id="passwordRepeatInput">
+              <button class="register__hide_password" id="togglePasswordRepeatBtn">
                 <img src="../icons/password_hide.svg" alt="">
               </button>
             </div>
@@ -65,6 +65,29 @@
       </div>
     </div>
   </div>
+
+  <script>
+    const togglePasswordBtn = document.getElementById("loginTogglePassword")
+    const togglePasswordRepeatBtn = document.getElementById("togglePasswordRepeatBtn")
+    const passwordRepeatInput = document.getElementById("passwordRepeatInput")
+    const passwordInput = document.getElementById("passwordInput")
+    
+    togglePasswordBtn.addEventListener("click", () => {
+      if (passwordInput.type === "password") {
+        passwordInput.type = "text"
+      } else {
+        passwordInput.type = "password"
+      }
+    })
+
+    togglePasswordRepeatBtn.addEventListener("click", () => {
+      if (passwordRepeatInput.type === "password") {
+        passwordRepeatInput.type = "text"
+      } else {
+        passwordRepeatInput.type = "password"
+      }
+    })
+  </script>
 
 </body>
 </html>

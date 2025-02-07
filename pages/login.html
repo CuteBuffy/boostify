@@ -25,8 +25,8 @@
           <div class="input__container">
             <p class="password__input_text">пароль</p>
             <div class="input__password_container">
-              <input class="login__input" type="password">
-              <button class="login__hide_password">
+              <input class="login__input" type="password" id="passwordInput">
+              <button class="login__hide_password" id="loginTogglePassword">
                 <img src="../icons/password_hide.svg" alt="">
               </button>
             </div>
@@ -56,6 +56,19 @@
       </div>
     </div>
   </div>
+
+  <script>
+    const togglePasswordBtn = document.getElementById("loginTogglePassword")
+    const passwordInput = document.getElementById("passwordInput")
+    
+    togglePasswordBtn.addEventListener("click", () => {
+      if (passwordInput.type === "password") {
+        passwordInput.type = "text"
+      } else {
+        passwordInput.type = "password"
+      }
+    })
+  </script>
 
 </body>
 </html>
