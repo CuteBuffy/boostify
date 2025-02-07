@@ -21,10 +21,12 @@
 .login__page_title_main {
   text-transform: capitalize;
   font-size: 25px;
+  color: #323232;
 }
 
 .login__page_title_desc {
   font-size: 15px;
+  color: #323232;
 }
 
 .login__page_loginform {

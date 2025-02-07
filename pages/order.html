@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Boostify | Order</title>
+  <link rel="stylesheet" href="../css/index.css">
+  <link rel="stylesheet" href="../css/footer.css">
+  <link rel="stylesheet" href="../css/order.css">
+</head>
+
+<body>
+
+  <div class="container">
+    <div class="page__wrapper">
+      <div class="order__page__content">
+        <div class="order__page_main">
+          <div class="order__page_top">
+            <h3 class="order__page_top_title">замовлення</h3>
+            <p class="order__page_top_desc">Виберіть, що вас цікавить</p>
+          </div>
+          <div class="order__page_mid">
+            <div class="order__page_mid_services">
+              <button class="order__page_mid_service">
+                <img src="../icons/instagram_logo.svg" alt="">
+              </button>
+              <button class="order__page_mid_service">
+                <img src="../icons/tiktok_logo.svg" alt="">
+              </button>
+              <button class="order__page_mid_service">
+                <img src="../icons/telegram_logo.svg" alt="">
+              </button>
+            </div>
+            <div class="vertical__line"></div>
+            <button class="order__page_mid_btn">
+              <p class="order__page_mid_btn_text">далі</p>
+              <img src="/icons/arrow_right.svg" alt="arrow right">
+            </button>
+          </div>
+          <div class="order__page_inputs">
+            <div class="order__page_inputs_category">
+              <button class="category__select_btn" name="category__select_btn" value="options">
+                <p class="category__btn_text">категорія</p>
+                <img src="../icons/category_arrow_down.svg" alt="">
+              </button>
+              <div class="category__options">
+                <div class="category__option">
+                  <p class="category__name">Нормальні (стабільні)</p>
+                  <p class="category__price">190₴</p>
+                </div>
+                <div class="category__option">
+                  <p class="category__name">ВІП категорія</p>
+                  <p class="category__price">310₴</p>
+                </div>
+              </div>
+            </div>
+            <input class="order__page_input" type="text" placeholder="посилання">
+            <input class="order__page_input" type="text" placeholder="кількість">
+          </div>
+        </div>
+        <div class="order__page_lower">
+          <button class="order__page_lower_btn">До кошику</button>
+        </div>
+      </div>
+      <div class="page__footer">
+        <a class="footer__icon" href="../index.html">
+          <img src="../icons/home.svg" alt="">
+        </a>
+        <div class="vertical__line"></div>
+        <div class="footer__other_icons">
+          <a class="footer__icon" href="../pages/order.html">
+            <img src="../icons/order.svg" alt="">
+          </a>
+          <a class="footer__icon" href="#">
+            <img src="../icons/cart.svg" alt="">
+          </a>
+          <a class="footer__icon" href="#">
+            <img src="../icons/support.svg" alt="">
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const optionsBtn = document.querySelector(".category__select_btn")
+    const categoryOptions = document.querySelector(".category__options")
+
+    optionsBtn.addEventListener("click", () => {
+      if (categoryOptions.style.display === "none") {
+        optionsBtn.style.borderColor = "#E1E4FA"
+        categoryOptions.style.display = "flex"
+      } else {
+        categoryOptions.style.display = 'none'
+        optionsBtn.style.borderColor = "#4BC9F1"
+      }
+    })
+  </script>
+
+</body>
+
+</html>

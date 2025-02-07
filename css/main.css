@@ -28,6 +28,7 @@
   text-transform: capitalize;
   font-weight: 600;
   font-size: 16px;
+  color: #323232;
 }
 
 .main__page_info {
@@ -56,7 +57,7 @@
 
 .boostify__logo_text {
   font-size: 20px;
-  color: #000;
+  color: #323232;
   text-transform: capitalize;
   font-weight: 600;
 }
@@ -65,6 +66,7 @@
   text-align: center;
   font-size: 15px;
   max-width: 256px;
+  color: #323232;
 }
 
 .main__page_lower {
