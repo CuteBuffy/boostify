@@ -10,7 +10,7 @@
 .main__page_upper {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 10px;
 }
 
 .main__page_category_btn {

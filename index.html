@@ -24,18 +24,18 @@
               </a>
             </button>
             <div class="main__page_category_options">
-              <div class="main__page_category_option">
+              <button class="main__page_category_option">
                 <img src="icons/instagram_logo.svg" alt="">
                 <p class="main__page_category_name">instagram</p>
-              </div>
-              <div class="main__page_category_option">
+              </button>
+              <button class="main__page_category_option">
                 <img src="icons/tiktok_logo.svg" alt="">
                 <p class="main__page_category_name">TikTok</p>
-              </div>
-              <div class="main__page_category_option">
+              </button>
+              <button class="main__page_category_option">
                 <img src="icons/telegram_logo.svg" alt="">
                 <p class="main__page_category_name">telegram</p>
-              </div>
+              </button>
             </div>
           </div>
           <div class="main__page_info">
@@ -90,7 +90,7 @@
     }
 
     selectBtn.addEventListener("click", () => {
-      options.style.display = checkOptionsDisplay() ? (options.style.display = "none", selectBtn.style.justifyContent = "center", categoryArrow.src = "../icons/arrow_down.svg") : (options.style.display = "flex", selectBtn.style.justifyContent = "space-between", categoryArrow.src = "../icons/arrow_up.svg")
+      options.style.display = checkOptionsDisplay() ? (options.style.display = "none", selectBtn.style.justifyContent = "center", categoryArrow.src = "icons/arrow_down.svg") : (options.style.display = "flex", selectBtn.style.justifyContent = "space-between", categoryArrow.src = "icons/arrow_up.svg")
     })
   </script>
 </body>
