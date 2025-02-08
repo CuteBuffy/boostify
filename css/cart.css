@@ -187,3 +187,9 @@
   border: 1px solid #4BC9F1;
   padding: 10px 14px;
 }
+
+@media (max-width: 768px) {
+  .cart__page_content {
+    gap: 10px;
+  }
+}
