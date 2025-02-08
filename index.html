@@ -90,8 +90,18 @@
     }
 
     selectBtn.addEventListener("click", () => {
-      options.style.display = checkOptionsDisplay() ? (options.style.display = "none", selectBtn.style.justifyContent = "center", categoryArrow.src = "icons/arrow_down.svg") : (options.style.display = "flex", selectBtn.style.justifyContent = "space-between", categoryArrow.src = "icons/arrow_up.svg")
-    })
+      if (checkOptionsDisplay()) {
+        options.style.display = "none";
+        selectBtn.style.justifyContent = "center";
+        categoryArrow.src = "icons/arrow_down.svg";
+      } else {
+        options.style.display = "flex";
+        selectBtn.style.justifyContent = "space-between";
+        categoryArrow.src = "icons/arrow_up.svg";
+      }
+    });
+
   </script>
 </body>
+
 </html>
