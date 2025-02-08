@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Boostify | Cart</title>
+  <link rel="stylesheet" href="../css/index.css">
+  <link rel="stylesheet" href="../css/footer.css">
+  <link rel="stylesheet" href="../css/cart.css">
+</head>
+
+<body>
+
+  <div class="container">
+    <div class="page__wrapper">
+      <div class="cart__page_content">
+        <div class="cart__page_main">
+          <div class="cart__page_main_title">
+            <h3 class="cart__page_main_text">кошик</h3>
+            <p class="cart__page_main_desc">Підтвердіть замовлення</p>
+          </div>
+          <div class="cart__page_main_services">
+            <div class="cart__page_main_service">
+              <img src="../icons/instagram_logo.svg" alt="">
+              <div class="cart__service_info">
+                <h4 class="cart__service_name">Інстаграм лайки</h4>
+                <p class="cart__service_quantity">Кількість: <span class="cart__service_quantity_number">144</span></p>
+              </div>
+              <div class="cart__page_main_service_actions">
+                <button>
+                  <img src="../icons/service_info.svg" alt="">
+                </button>
+                <button>
+                  <img src="../icons/service_delete.svg" alt="">
+                </button>
+              </div>
+            </div>
+            <div class="cart__page_main_service">
+              <img src="../icons/instagram_logo.svg" alt="">
+              <div class="cart__service_info">
+                <h4 class="cart__service_name">Інстаграм лайки</h4>
+                <p class="cart__service_quantity">Кількість: <span class="cart__service_quantity_number">144</span></p>
+              </div>
+              <div class="cart__page_main_service_actions">
+                <button>
+                  <img src="../icons/service_info.svg" alt="">
+                </button>
+                <button>
+                  <img src="../icons/service_delete.svg" alt="">
+                </button>
+              </div>
+            </div>
+            <div class="cart__page_main_service">
+              <img src="../icons/instagram_logo.svg" alt="">
+              <div class="cart__service_info">
+                <h4 class="cart__service_name">Інстаграм лайки</h4>
+                <p class="cart__service_quantity">Кількість: <span class="cart__service_quantity_number">144</span></p>
+              </div>
+              <div class="cart__page_main_service_actions">
+                <button>
+                  <img src="../icons/service_info.svg" alt="">
+                </button>
+                <button>
+                  <img src="../icons/service_delete.svg" alt="">
+                </button>
+              </div>
+            </div>
+            <div class="cart__page_main_service">
+              <img src="../icons/instagram_logo.svg" alt="">
+              <div class="cart__service_info">
+                <h4 class="cart__service_name">Інстаграм лайки</h4>
+                <p class="cart__service_quantity">Кількість: <span class="cart__service_quantity_number">144</span></p>
+              </div>
+              <div class="cart__page_main_service_actions">
+                <button>
+                  <img src="../icons/service_info.svg" alt="">
+                </button>
+                <button>
+                  <img src="../icons/service_delete.svg" alt="">
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="cart__page_total">
+          <div class="cart__page_total_title">
+            <p class="cart__page_total_price_text">Загальна сумма</p>
+            <p class="cart__page_total_price">344₴</p>
+          </div>
+          <button class="cart__page_total_order_btn" id="orderBtn">замовити</button>
+        </div>
+      </div>
+      <div class="page__footer">
+        <a class="footer__icon" href="../index.html">
+          <img src="../icons/home.svg" alt="">
+        </a>
+        <div class="vertical__line"></div>
+        <div class="footer__other_icons">
+          <a class="footer__icon" href="../pages/order.html">
+            <img src="../icons/order.svg" alt="">
+          </a>
+          <a class="footer__icon" href="../pages/cart.html">
+            <img src="../icons/cart.svg" alt="">
+          </a>
+          <a class="footer__icon" href="#">
+            <img src="../icons/support.svg" alt="">
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal__contact" id="modalWindow">
+      <div class="modal__contact_container">
+        <div class="modal__contact_top">
+          <img class="modal__contact_top_img" src="../icons/telegram_logo.svg" alt="">
+          <input type="text" class="modal__contact_top_input" placeholder="Telegram нік або номер">
+        </div>
+        <div class="modal__contact_bottom">
+          <button class="modal__contact_bottom_confirm">підтвердити</button>
+          <button class="modal__contact_bottom_close" id="modalCloseBtn">
+            <img src="../icons/modal_close.svg" alt="">
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const orderBtn = document.getElementById("orderBtn")
+    const modalWindow = document.getElementById("modalWindow")
+
+    const modalCloseBtn = document.getElementById("modalCloseBtn")
+
+    const checkModalDisplay = () => {
+      return modalWindow.style.display === "none";
+    }
+
+    orderBtn.addEventListener("click", () => {
+      if (checkModalDisplay()) {
+        modalWindow.style.display = "flex";
+      } else {
+        modalWindow.style.display = "none";
+      }
+    })
+
+    modalCloseBtn.addEventListener("click", () => {
+      modalWindow.style.display = "none"
+    })
+  </script>
+
+</body>
+
+</html>

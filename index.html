@@ -20,7 +20,7 @@
             <button class="main__page_category_btn" name="main__page_category_btn">
               <p class="main__page_categories_title">категорії</p>
               <a href="#">
-                <img src="icons/arrow_down.svg" alt="">
+                <img id="categoryArrow" src="icons/arrow_down.svg" alt="">
               </a>
             </button>
             <div class="main__page_category_options">
@@ -69,7 +69,7 @@
           <a class="footer__icon" href="pages/order.html">
             <img src="icons/order.svg" alt="">
           </a>
-          <a class="footer__icon" href="#">
+          <a class="footer__icon" href="pages/cart.html">
             <img src="icons/cart.svg" alt="">
           </a>
           <a class="footer__icon" href="#">
@@ -83,13 +83,14 @@
   <script>
     const selectBtn = document.querySelector(".main__page_category_btn")
     const options = document.querySelector(".main__page_category_options")
+    const categoryArrow = document.getElementById("categoryArrow")
 
     const checkOptionsDisplay = () => {
       return options.style.display === "flex";
     }
 
     selectBtn.addEventListener("click", () => {
-      options.style.display = checkOptionsDisplay() ? (options.style.display = "none", selectBtn.style.justifyContent = "center") : (options.style.display = "flex", selectBtn.style.justifyContent = "space-between")
+      options.style.display = checkOptionsDisplay() ? (options.style.display = "none", selectBtn.style.justifyContent = "center", categoryArrow.src = "../icons/arrow_down.svg") : (options.style.display = "flex", selectBtn.style.justifyContent = "space-between", categoryArrow.src = "../icons/arrow_up.svg")
     })
   </script>
 </body>
