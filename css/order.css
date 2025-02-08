@@ -145,6 +145,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  color: #000;
   border: 2px solid #4BC9F1;
   border-radius: var(--border-radius10);
   padding: 10px 30px;
