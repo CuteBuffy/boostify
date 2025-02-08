@@ -87,6 +87,7 @@
     const optionsBtn = document.querySelector(".category__select_btn")
     const categoryOptions = document.querySelector(".category__options")
     const categoryArrow = document.getElementById("categoryArrow")
+    const orderPageInput = document.querySelectorAll(".order__page_input")
 
     const checkCategoryDisplay = () => {
       return categoryOptions.style.display === "flex";
@@ -94,11 +95,13 @@
 
     optionsBtn.addEventListener("click", () => {
       if (checkCategoryDisplay()) {
-        categoryOptions.style.display = 'none'
+        categoryOptions.style.display = "none"
+        orderPageInput.forEach(input => input.style.display = "flex")
         optionsBtn.style.borderColor = "#4BC9F1"
         categoryArrow.src = "../icons/category_arrow_down.svg"
       } else {
         categoryOptions.style.display = "flex"
+        orderPageInput.forEach(input => input.style.display = "none")
         optionsBtn.style.borderColor = "#E1E4FA"
         categoryArrow.src = "../icons/arrow_up_category.svg"
       }
