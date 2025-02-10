@@ -6,15 +6,13 @@
   justify-content: flex-start;
   padding-top: 2rem;
   gap: 40px;
-  border: 1px solid red;
 }
 
 .page__footer {
   display: flex;
   align-items: center;
-  bottom: 0;
   position: sticky;
-  top: 100vh;
+  bottom: 0;
   padding: 10px;
   background-color: var(--clr-white);
   border-radius: var(--border-radius15);
