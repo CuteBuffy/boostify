@@ -63,6 +63,13 @@
   transition: background-color 0.2s ease-in-out, box-shadow 0.1s ease-in-out;
 }
 
+.order__page_mid_logo {
+  display: flex;
+  border-radius: 999px;
+  background: #E1E4FA;
+  padding: 10px;
+}
+
 .order__page_mid_service:hover {
   background-color: var(--clr-white);
   outline: 1px solid #4BC9F1;
