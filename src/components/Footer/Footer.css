@@ -1,0 +1,32 @@
+.page__footer {
+  display: flex;
+  align-items: center;
+  position: sticky;
+  bottom: calc(1rem + env(safe-area-inset-bottom));
+  padding: 5px;
+  background-color: var(--clr-black);
+  border-radius: 65px;
+  gap: 1rem;
+}
+
+.footer__icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.footer__icon {
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 55px;
+  border-radius: 140px;
+  transition: background-color 0.2s ease;
+}
+
+.footer__icon.page__active {
+  background-color: #5DDBF5;
+}
