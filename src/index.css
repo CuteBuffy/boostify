@@ -25,6 +25,7 @@ html {
 }
 
 body {
+  background-color: #F5F5F5;
   overflow-x: hidden;
   position: relative;
   min-height: 100dvh;
