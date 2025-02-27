@@ -6,6 +6,7 @@
   min-width: 350px;
   max-width: 350px;
   padding-top: 2rem;
+  z-index: 999;
   gap: 6rem;
 }
 
