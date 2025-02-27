@@ -11,10 +11,10 @@ const OrderPage = () => {
     document.title = "Boostify | Order"
   }, [])
 
-  return(
+  return (
     <>
-      <div className="container">
-        <div className="page__wrapper">
+      <div className="page__wrapper_blue_bg">
+        <div className="container page__container">
           <OrderPageContent />
           <Footer />
         </div>

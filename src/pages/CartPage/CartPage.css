@@ -5,6 +5,7 @@
   justify-content: center;
   min-width: 350px;
   max-width: 350px;
+  padding-top: 2rem;
   gap: 6rem;
 }
 
@@ -49,6 +50,7 @@
   flex-direction: column;
   gap: 25px;
   padding: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
 }
 
 .cart__service_img {
@@ -165,17 +167,23 @@
 
 .modal__contact_top {
   display: flex;
+  flex-direction: column;
   width: 100%;
+  gap: 20px;
+}
+
+.modal__contact_field {
+  display: flex;
   gap: 10px;
 }
 
-.modal__contact_top_img {
+.modal__contact_img {
   background-color: #C3F5F5;
   padding: 12px 15px;
   border-radius: var(--border-radius10);
 }
 
-.modal__contact_top_input {
+.modal__contact_input {
   width: 100%;
   background-color: #C3F5F5;
   border-radius: var(--border-radius10);
@@ -185,7 +193,7 @@
   border: none;
 }
 
-.modal__contact_top_input:focus {
+.modal__contact_input:focus {
   outline: 2px solid #F0F0F0;
 }
 
@@ -195,10 +203,9 @@
 }
 
 .modal__contact_bottom_confirm {
-  background-color: transparent;
+  background-color: var(--clr-blue);
   border-radius: var(--border-radius10);
-  border: 1px solid #4BC9F1;
-  color: #4BC9F1;
+  color: var(--clr-white);
   padding: 10px 14px;
   font-size: 16px;
   text-transform: capitalize;

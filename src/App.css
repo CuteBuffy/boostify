@@ -1,4 +1,12 @@
-.page__wrapper {
+.page__wrapper_white_bg {
+  background-color: #F5F5F5;
+}
+
+.page__wrapper_blue_bg {
+  background-color: var(--clr-lightblue);
+}
+
+.page__container {
   min-height: calc(100dvh - env(safe-area-inset-bottom));
   display: flex;
   flex-direction: column;

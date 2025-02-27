@@ -17,8 +17,8 @@ const CartPage = () => {
 
   return (
     <ModalProvider>
-      <div className="container">
-        <div className="page__wrapper">
+      <div className="page__wrapper_white_bg">
+        <div className="container page__container">
           <CartPageContent />
           <Footer />
         </div>

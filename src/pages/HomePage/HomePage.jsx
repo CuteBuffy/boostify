@@ -16,8 +16,8 @@ const MainPage = () => {
   }, [])
 
   return (
-    <div className="container">
-      <div className="page__wrapper">
+    <div className="page__wrapper_white_bg">
+      <div className="container page__container">
         <div className="main__page_content">
           <HomePageCategories />
           <HomePageInfo />
