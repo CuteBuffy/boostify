@@ -55,6 +55,7 @@
   justify-content: space-between;
   padding: 15px 20px;
   border-radius: var(--border-radius15);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .order__page_mid_services {
