@@ -21,6 +21,16 @@
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
 }
 
+.instagram__img {
+  width: 76px;
+  height: 72px;
+}
+
+.boostify__logo_img {
+  width: 35px;
+  height: 35px;
+}
+
 .main__page_category_btn.categories__open {
   justify-content: space-between;
 }
