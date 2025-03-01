@@ -3,12 +3,12 @@ import { Link } from "react-router-dom"
 
 import OrderPageCategories from "../OrderPageCategories/OrderPageCategories"
 
-import ArrowDown from "../../../icons/category_arrow_down.svg"
-import ArrowUp from "../../../icons/category_arrow_up.svg"
-import InstagramLogo from "../../../icons/instagram_logo.svg"
-import TiktokLogo from "../../../icons/tiktok_logo.svg"
-import TelegramLogo from "../../../icons/telegram_logo.svg"
-import BoostifyLogo from "../../../icons/boostify_logo.svg"
+import ArrowDown from "../../../icons/category_arrow_down.png"
+import ArrowUp from "../../../icons/category_arrow_up.png"
+import InstagramLogo from "../../../icons/instagram_logo.png"
+import TiktokLogo from "../../../icons/tiktok_logo.png"
+import TelegramLogo from "../../../icons/telegram_logo.png"
+import BoostifyLogo from "../../../icons/boostify_logo.png"
 
 const OrderPageContent = () => {
 

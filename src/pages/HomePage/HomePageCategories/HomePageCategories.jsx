@@ -1,8 +1,8 @@
 import { useState } from "react";
 import CategoryOptions from "./CategoryOptions/CategoryOptions"
 
-import ArrowDown from "../../../icons/arrow_down.svg"
-import ArrowUp from "../../../icons/arrow_up.svg"
+import ArrowDown from "../../../icons/arrow_down.png"
+import ArrowUp from "../../../icons/arrow_up.png"
 
 const HomePageCategories = () => {
 
@@ -20,7 +20,7 @@ const HomePageCategories = () => {
           name="main__page_category_btn"
           onClick={handleCategoryOpen}>
           <p className="main__page_categories_title">категорії</p>
-          <a href="#">
+          <a className="main__page_categories_arrow" href="#">
             <img src={categoryOpen ? ArrowUp : ArrowDown} alt="" />
           </a>
         </button>

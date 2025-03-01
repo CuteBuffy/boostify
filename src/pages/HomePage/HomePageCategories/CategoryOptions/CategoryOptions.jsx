@@ -1,6 +1,6 @@
-import InstLogo from "../../../../icons/instagram_logo.svg"
-import TiktokLogo from "../../../../icons/tiktok_logo.svg"
-import TelegramLogo from "../../../../icons/telegram_logo.svg"
+import InstLogo from "../../../../icons/instagram_logo.png"
+import TiktokLogo from "../../../../icons/tiktok_logo.png"
+import TelegramLogo from "../../../../icons/telegram_logo.png"
 
 const CategoryOptions = () => {
   return (

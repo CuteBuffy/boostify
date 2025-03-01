@@ -21,14 +21,19 @@
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
 }
 
-.instagram__img {
-  width: 76px;
-  height: 72px;
+
+.main_page_category_img {
+  width: 100%;
+  height: 100%;
+  max-width: 30px;
+  max-height: 30px;
 }
 
-.boostify__logo_img {
-  width: 35px;
-  height: 35px;
+.main__page_categories_arrow {
+  width: 100%;
+  height: 100%;
+  max-width: 24px;
+  max-height: 15px;
 }
 
 .main__page_category_btn.categories__open {
@@ -174,6 +179,13 @@
   border-radius: 15px;
   padding: 20px 10px;
   background-color: #F5F5F5;
+}
+
+.main__page_socials_btn img {
+  width: 100%;
+  height: 100%;
+  max-width: 30px;
+  max-height: 30px;
 }
 
 .main__page_about_container {

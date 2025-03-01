@@ -1,10 +1,10 @@
 import { useModal } from "../CartPageModal/ModalContext"
 
-import InstagramLogo from "../../../icons/instagram_logo.svg"
-import TiktokLogo from "../../../icons/tiktok_logo.svg"
-import TelegramLogo from "../../../icons/telegram_logo.svg"
+import InstagramLogo from "../../../icons/instagram_logo.png"
+import TiktokLogo from "../../../icons/tiktok_logo.png"
+import TelegramLogo from "../../../icons/telegram_logo.png"
 
-import ServiceDelete from "../../../icons/service_delete.svg"
+import ServiceDelete from "../../../icons/service_delete.png"
 
 const CartPageContent = () => {
 
@@ -26,7 +26,7 @@ const CartPageContent = () => {
                 <p className="cart__service_quantity">Кількість: <span className="cart__service_quantity_number">144412354656838653685</span></p>
               </div>
               <div className="cart__page_main_service_actions">
-                <button>
+                <button className="cart__page_main_service_delete">
                   <img src={ServiceDelete} alt="" />
                 </button>
               </div>
@@ -38,7 +38,7 @@ const CartPageContent = () => {
                 <p className="cart__service_quantity">Кількість: <span className="cart__service_quantity_number">745745475</span></p>
               </div>
               <div className="cart__page_main_service_actions">
-                <button>
+                <button className="cart__page_main_service_delete">
                   <img src={ServiceDelete} alt="" />
                 </button>
               </div>
@@ -50,7 +50,7 @@ const CartPageContent = () => {
                 <p className="cart__service_quantity">Кількість: <span className="cart__service_quantity_number">64672</span></p>
               </div>
               <div className="cart__page_main_service_actions">
-                <button>
+                <button className="cart__page_main_service_delete">
                   <img src={ServiceDelete} alt="" />
                 </button>
               </div>
@@ -62,7 +62,7 @@ const CartPageContent = () => {
                 <p className="cart__service_quantity">Кількість: <span className="cart__service_quantity_number">144412354656838653685</span></p>
               </div>
               <div className="cart__page_main_service_actions">
-                <button>
+                <button className="cart__page_main_service_delete">
                   <img src={ServiceDelete} alt="" />
                 </button>
               </div>
@@ -74,7 +74,7 @@ const CartPageContent = () => {
                 <p className="cart__service_quantity">Кількість: <span className="cart__service_quantity_number">745745475</span></p>
               </div>
               <div className="cart__page_main_service_actions">
-                <button>
+                <button className="cart__page_main_service_delete">
                   <img src={ServiceDelete} alt="" />
                 </button>
               </div>
@@ -86,7 +86,7 @@ const CartPageContent = () => {
                 <p className="cart__service_quantity">Кількість: <span className="cart__service_quantity_number">64672</span></p>
               </div>
               <div className="cart__page_main_service_actions">
-                <button>
+                <button className="cart__page_main_service_delete">
                   <img src={ServiceDelete} alt="" />
                 </button>
               </div>
@@ -98,7 +98,7 @@ const CartPageContent = () => {
                 <p className="cart__service_quantity">Кількість: <span className="cart__service_quantity_number">144412354656838653685</span></p>
               </div>
               <div className="cart__page_main_service_actions">
-                <button>
+                <button className="cart__page_main_service_delete">
                   <img src={ServiceDelete} alt="" />
                 </button>
               </div>
@@ -110,7 +110,7 @@ const CartPageContent = () => {
                 <p className="cart__service_quantity">Кількість: <span className="cart__service_quantity_number">745745475</span></p>
               </div>
               <div className="cart__page_main_service_actions">
-                <button>
+                <button className="cart__page_main_service_delete">
                   <img src={ServiceDelete} alt="" />
                 </button>
               </div>
@@ -122,7 +122,7 @@ const CartPageContent = () => {
                 <p className="cart__service_quantity">Кількість: <span className="cart__service_quantity_number">64672</span></p>
               </div>
               <div className="cart__page_main_service_actions">
-                <button>
+                <button className="cart__page_main_service_delete">
                   <img src={ServiceDelete} alt="" />
                 </button>
               </div>

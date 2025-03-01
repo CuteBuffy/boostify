@@ -1,14 +1,14 @@
 import React from "react";
 import { Link, useLocation } from "react-router-dom";
 
-import HomeIcon from "../../icons/home.svg";
-import OrderIcon from "../../icons/order.svg";
-import CartIcon from "../../icons/cart.svg";
-import SupportIcon from "../../icons/support.svg";
+import HomeIcon from "../../icons/home.png";
+import OrderIcon from "../../icons/order.png";
+import CartIcon from "../../icons/cart.png";
+import SupportIcon from "../../icons/support.png";
 
-import HomeIconActive from "../../icons/homeActive.svg";
-import OrderIconActive from "../../icons/orderActive.svg";
-import CartIconActive from "../../icons/cartActive.svg";
+import HomeIconActive from "../../icons/homeActive.png";
+import OrderIconActive from "../../icons/orderActive.png";
+import CartIconActive from "../../icons/cartActive.png";
 
 import "./Footer.css";
 

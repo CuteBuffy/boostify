@@ -1,8 +1,8 @@
 import { useModal } from "./ModalContext"
 
-import TelegramIcon from "../../../icons/telegram_icon.svg"
-import EmailIcon from "../../../icons/email.svg"
-import ModalCloseBtn from "../../../icons/modal_close.svg"
+import TelegramIcon from "../../../icons/telegram_icon.png"
+import EmailIcon from "../../../icons/email.png"
+import ModalCloseBtn from "../../../icons/modal_close.png"
 
 const CartPageModal = () => {
 
@@ -15,11 +15,15 @@ const CartPageModal = () => {
       <div className="modal__contact">
         <div className="modal__contact_container">
             <div className="modal__contact_field">
-              <img className="modal__contact_img" src={TelegramIcon} alt="" />
+              <div className="modal__contact_img_container">
+                <img className="modal__contact_img" src={TelegramIcon} alt="" />
+              </div>
               <input type="text" className="modal__contact_input" placeholder="Telegram нік або номер" />
             </div>
             <div className="modal__contact_field">
-              <img className="modal__contact_img" src={EmailIcon} alt="" />
+            <div className="modal__contact_img_container">
+                <img className="modal__contact_img" src={EmailIcon} alt="" />
+              </div>
               <input type="text" className="modal__contact_input" placeholder="Ел. пошта" />
             </div>
           <div className="modal__contact_bottom">

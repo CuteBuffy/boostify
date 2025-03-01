@@ -72,6 +72,14 @@
   transition: background-color 0.2s ease-in-out, box-shadow 0.1s ease-in-out;
 }
 
+.order__page_mid_service img,
+.order__page_mid_logo img {
+  width: 100%;
+  height: 100%;
+  max-width: 30px;
+  max-height: 30px;
+}
+
 .order__page_mid_logo {
   display: flex;
   border-radius: 999px;
@@ -156,6 +164,13 @@
   padding: 10px 30px;
   font-size: 16px;
   color: #323232;
+}
+
+.category__select_btn img {
+  width: 100%;
+  height: 100%;
+  max-width: 24px;
+  max-height: 15px;
 }
 
 .category__select_btn.categories__open {

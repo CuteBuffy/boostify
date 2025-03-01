@@ -1,5 +1,5 @@
-import TelegramBlue from "../../../icons/telegram_blue.svg"
-import InstagramBlue from "../../../icons/instagram_blue.svg"
+import TelegramBlue from "../../../icons/telegram_blue.png"
+import InstagramBlue from "../../../icons/instagram_blue.png"
 
 const HomePageSocials = () => {
   return (
