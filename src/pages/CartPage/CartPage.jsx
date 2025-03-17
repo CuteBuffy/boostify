@@ -1,10 +1,7 @@
 import { useState, useEffect } from "react"
 
-import { ModalProvider } from "./CartPageModal/ModalContext.jsx"
-
 import Footer from "../../components/Footer/Footer.jsx"
 import CartPageContent from "./CartPageContent/CartPageContent.jsx"
-import CartPageModal from "./CartPageModal/CartPageModal.jsx"
 
 import "./CartPage.css"
 
@@ -14,17 +11,13 @@ const CartPage = () => {
     document.title = "Boostify | Cart"
   }, [])
 
-
   return (
-    <ModalProvider>
-      <div className="page__wrapper_white_bg">
-        <div className="container page__container">
-          <CartPageContent />
-          <Footer />
-        </div>
-        <CartPageModal />
+    <div className="page__wrapper_white_bg">
+      <div className="container page__container">
+        <CartPageContent />
+        <Footer />
       </div>
-    </ModalProvider>
+    </div>
   )
 }
 

@@ -8,7 +8,7 @@ const HomePageSocials = () => {
         <div className="main__page_socials_text_container">
           <p className="main__page_socials_text">Ми в соц. мережах</p>
         </div>
-        <a className="main__page_socials_btn" href="#">
+        <a className="main__page_socials_btn" href="https://t.me//riseapp_support" target="_blank">
           <img src={TelegramBlue} alt="" />
         </a>
         <a className="main__page_socials_btn" href="#">

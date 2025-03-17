@@ -24,6 +24,10 @@ html {
   scroll-behavior: smooth;
 }
 
+html::-webkit-scrollbar {
+  display: none;
+}
+
 body {
   background-color: #F5F5F5;
   overflow-x: hidden;
@@ -91,12 +95,16 @@ button {
   height: 72px;
 }
 
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    appearance: none;
+}
+
 .boostify__logo_img {
   width: 35px;
   height: 35px;
 }
-
-
 
 @media (min-width: 475px) {
   .container {
