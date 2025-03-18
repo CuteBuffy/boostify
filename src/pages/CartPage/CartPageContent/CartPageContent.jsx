@@ -47,7 +47,7 @@ const CartPageContent = () => {
     setCartItems(savedCart);
   }, []);
 
-  const totalPrice = Math.round(cartItems.reduce((acc, item) => acc + (item.price * item.quantity) / 1000, 0) * 100) / 100;
+  const totalPrice = cartItems.reduce((acc, item) => acc + item.price * item.quantity / 1000, 0);
 
   const handleRemove = (index) => {
     const updatedCart = cartItems.filter((_, i) => i !== index);

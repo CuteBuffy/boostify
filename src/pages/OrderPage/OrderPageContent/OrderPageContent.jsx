@@ -30,6 +30,12 @@ const OrderPageContent = () => {
   const [categoriesData, setCategoriesData] = useState([])
 
   const [selectedCategory, setSelectedCategory] = useState(null);
+  
+  const handleResetCategory = () => {
+    setSelectedCategory(null);
+    setSocialLink("");
+    setQuantity(0);
+  }
 
   const handleCategorySelect = (categoryType, categoryQuality, categoryPrice, categoryId) => {
     if (selectedCategory !== `${categoryType} - ${categoryQuality}`) {
@@ -121,8 +127,9 @@ const OrderPageContent = () => {
     const updatedCart = [...existingCart, newItem];
   
     localStorage.setItem("cart", JSON.stringify(updatedCart));
-  
-    navigate("/cart");
+
+    handleResetCategory();
+    alert("Додано до кошика!")
   };  
 
   return (
