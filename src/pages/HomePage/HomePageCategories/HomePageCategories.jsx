@@ -4,17 +4,7 @@ import CategoryOption from "./CategoryOption/CategoryOption"
 import ArrowDown from "../../../icons/arrow_down.png"
 import ArrowUp from "../../../icons/arrow_up.png"
 
-import InstagramLogo from "../../../icons/instagram_logo.png"
-import TiktokLogo from "../../../icons/tiktok_logo.png"
-import TelegramLogo from "../../../icons/telegram_logo.png"
-
 const APIURL = import.meta.env.VITE_BOOSTIFY_API_URL;
-
-const logoMapping = {
-  tiktok: TiktokLogo,
-  telegram: TelegramLogo,
-  instagram: InstagramLogo,
-};
 
 const HomePageCategories = () => {
 
@@ -62,11 +52,10 @@ const HomePageCategories = () => {
                 <CategoryOption
                   key={socialNetowrk.id}
                   name={socialNetowrk.name}
-                  logo={
-                    logoMapping[socialNetowrk.name.toLowerCase()]
-                  }
+                  logo={APIURL + socialNetowrk.icon}
                 />
-              ))
+              )
+              )
             }
           </div>}
       </div>

@@ -4,6 +4,8 @@ import TelegramIcon from "../../../../icons/telegram_icon.png";
 import EmailIcon from "../../../../icons/email.png";
 import ModalCloseBtn from "../../../../icons/modal_close.png";
 
+const APIURL = import.meta.env.VITE_BOOSTIFY_API_URL;
+
 const CartPageModal = ({ onClose, setSuccessfull, clearCart }) => {
   const [telegram, setTelegram] = useState("");
   const [email, setEmail] = useState("");
@@ -34,13 +36,14 @@ const CartPageModal = ({ onClose, setSuccessfull, clearCart }) => {
     };
 
     try {
-      const response = await fetch("http://127.0.0.1:8000/promotion/order", {
+      const response = await fetch(`${APIURL}/promotion/order`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
         body: JSON.stringify(orderData),
       });
+
 
       if (!response.ok) {
         const errorData = await response.json();
@@ -75,7 +78,7 @@ const CartPageModal = ({ onClose, setSuccessfull, clearCart }) => {
                 className="modal__contact_input"
                 placeholder="Telegram нік або номер"
                 value={telegram}
-                onChange={(e) => setTelegram("@" + e.target.value.replace(/^@*/, ""))}
+                onChange={(e) => setTelegram(e.target.value)}
               />
             </div>
             <div className="modal__contact_field">

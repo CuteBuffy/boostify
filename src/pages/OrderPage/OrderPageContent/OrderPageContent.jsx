@@ -6,18 +6,9 @@ import OrderPageSocial from "./OrderPageSocial/OrgerPageSocial"
 
 import ArrowDown from "../../../icons/category_arrow_down.png"
 import ArrowUp from "../../../icons/category_arrow_up.png"
-import InstagramLogo from "../../../icons/instagram_logo.png"
-import TiktokLogo from "../../../icons/tiktok_logo.png"
-import TelegramLogo from "../../../icons/telegram_logo.png"
 import BoostifyLogo from "../../../icons/boostify_logo.png"
 
 const APIURL = import.meta.env.VITE_BOOSTIFY_API_URL;
-
-const logoMapping = {
-  tiktok: TiktokLogo,
-  telegram: TelegramLogo,
-  instagram: InstagramLogo,
-};
 
 const OrderPageContent = () => {
 
@@ -31,6 +22,7 @@ const OrderPageContent = () => {
   const [socialLink, setSocialLink] = useState("");
   const [serviceType, setServiceType] = useState(null);
   const [categoryId, setCategoryId] = useState(null);
+  const [socialIcon, setSocialIcon] = useState(null);
 
   const [categoriesOpen, setCategoriesOpen] = useState(false);
 
@@ -94,7 +86,7 @@ const OrderPageContent = () => {
   }
 
   const handleServiceSelect = (service) => {
-    setSearchParams({service: service.toLowerCase()})
+    setSearchParams({ service: service.toLowerCase() })
     setSelectedCategory(null);
   };
 
@@ -112,24 +104,27 @@ const OrderPageContent = () => {
       return;
     }
   
+    const selectedSocial = socialsData.find(social => social.name.toLowerCase() === activeService);
+    const socialIcon = selectedSocial ? APIURL + selectedSocial.icon : null;
+  
     const newItem = {
       service: activeService,
       serviceType: serviceType,
       quantity: quantity,
       price: price,
       link: socialLink,
-      categoryId: categoryId
+      categoryId: categoryId,
+      socialIcon: socialIcon
     };
   
     const existingCart = JSON.parse(localStorage.getItem("cart")) || [];
-  
     const updatedCart = [...existingCart, newItem];
   
     localStorage.setItem("cart", JSON.stringify(updatedCart));
-    
-    navigate("/cart");
-  };
   
+    navigate("/cart");
+  };  
+
   return (
     <div className="order__page__content">
       <div className="order__page_main">
@@ -141,16 +136,16 @@ const OrderPageContent = () => {
           {socialsData.length ?
             <>
               <div className="order__page_mid_services">
-                {socialsData.map((social) => (
-                  <OrderPageSocial
-                    key={social.id}
-                    logo={
-                      logoMapping[social.name.toLowerCase()]
-                    }
-                    isActive={social.name.toLowerCase() === activeService}
-                    onClick={() => handleServiceSelect(social.name.toLowerCase())}
-                  />
-                ))}
+                {socialsData.map((social) => {
+                  return (
+                    <OrderPageSocial
+                      key={social.id}
+                      logo={APIURL + social.icon}
+                      isActive={social.name.toLowerCase() === activeService}
+                      onClick={() => handleServiceSelect(social.name.toLowerCase())}
+                    />
+                  )
+                })}
               </div>
               {socialsData.length ? <div className="vertical__line"></div> : null}
               <div className="order__page_mid_logo">
@@ -161,7 +156,7 @@ const OrderPageContent = () => {
         <div className="order__page_inputs">
           <div className="order__page_inputs_category">
             <button
-              className={`category__select_btn ${categoriesOpen && "categories__open"}`}
+              className={`category__select_btn${categoriesOpen ? " categories__open" : ""}`}
               name="category__select_btn"
               value="options"
               onClick={handleCategoriesOpen}
@@ -204,29 +199,29 @@ const OrderPageContent = () => {
           </div>
           {(!categoriesOpen) &&
             <>
-              <input 
-              className="order__page_input" 
-              type="text" 
-              placeholder="посилання" 
-              value={socialLink}
-              onChange={handleSocialLinkInput}
+              <input
+                className="order__page_input"
+                type="text"
+                placeholder="посилання"
+                value={socialLink}
+                onChange={handleSocialLinkInput}
               />
-              <input 
-              className="order__page_input"
-              type="text" 
-              maxLength={6}
-              placeholder="кількість" 
-              value={quantity > 0 ? quantity : ""}
-              onChange={handleQuantityInput}
+              <input
+                className="order__page_input"
+                type="text"
+                maxLength={6}
+                placeholder="кількість"
+                value={quantity > 0 ? quantity : ""}
+                onChange={handleQuantityInput}
               />
             </>
           }
         </div>
       </div>
       <div className="order__page_lower">
-        <button 
-        className="order__page_lower_btn"
-        onClick={handleAddToCart}
+        <button
+          className="order__page_lower_btn"
+          onClick={handleAddToCart}
         >До кошику</button>
       </div>
     </div>

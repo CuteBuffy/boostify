@@ -11,7 +11,7 @@ const HomePageSocials = () => {
         <a className="main__page_socials_btn" href="https://t.me//riseapp_support" target="_blank">
           <img src={TelegramBlue} alt="" />
         </a>
-        <a className="main__page_socials_btn" href="#">
+        <a className="main__page_socials_btn" href="https://www.instagram.com/boostify.space?igsh=MWs1ZWVwZ2FlM3dtNw%3D%3D&utm_source=qr" target="_blank">
           <img src={InstagramBlue} alt="" />
         </a>
       </div>

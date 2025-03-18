@@ -1,8 +1,5 @@
 import { useState, useEffect } from "react";
 
-import InstagramLogo from "../../../icons/instagram_logo.png";
-import TiktokLogo from "../../../icons/tiktok_logo.png";
-import TelegramLogo from "../../../icons/telegram_logo.png";
 import ServiceDelete from "../../../icons/service_delete.png";
 
 import EmptyCartModal from "./EmptyCartModal/EmptyCartModal.jsx";
@@ -78,7 +75,9 @@ const CartPageContent = () => {
           <div className="cart__page_main_services">
             {cartItems.length > 0 ? (
               cartItems.map((orderInfo, index) => {
-                const logo = orderInfo.service.toLowerCase() === "instagram" ? InstagramLogo : orderInfo.service.toLowerCase() === "tiktok" ? TiktokLogo : orderInfo.service.toLowerCase() === "telegram" ? TelegramLogo : null;
+
+                const logo = orderInfo.socialIcon
+
                 const price = orderInfo.price * orderInfo.quantity / 1000;
                 return (
                   <div className="cart__page_main_service" key={index}>

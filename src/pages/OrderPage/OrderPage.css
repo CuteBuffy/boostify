@@ -20,6 +20,8 @@
 
 .vertical__line {
   height: 30px;
+  margin-left: 1rem;
+  margin-right: 1rem;
   border-left: 1px solid #5DDBF5;
 }
 
@@ -61,7 +63,10 @@
 .order__page_mid_services {
   display: flex;
   align-items: center;
-  gap: 25px;
+  gap: 20px;
+  min-width: 220px;
+  max-width: 220px;
+  overflow-x: scroll;
 }
 
 .order__page_mid_services::-webkit-scrollbar {
@@ -89,6 +94,8 @@
   height: 100%;
   max-width: 30px;
   max-height: 30px;
+  min-width: 30px;
+  min-height: 30px;
 }
 
 .order__page_mid_logo {
@@ -263,6 +270,11 @@
   .order__page__content {
     min-width: unset;
     width: 100%;
+  }
+
+
+  .order__page_mid_services {
+    min-width: unset;
   }
 }
 
