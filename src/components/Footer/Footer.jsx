@@ -40,7 +40,7 @@ const Footer = () => {
           className="footer__icon"
           target="_blank"
           rel="noopener noreferrer"
-          href="https://t.me//riseapp_support"
+          href="https://t.me/+LNU_MIxuB2o4YTBi"
         >
           <img src={SupportIcon} alt="Support" />
         </a>
