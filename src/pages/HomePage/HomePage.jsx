@@ -9,8 +9,6 @@ import HomePageAbout from "./HomePageAbout/HomePageAbout.jsx";
 
 import "./HomePage.css"
 
-import testSvg from "../../icons/test.svg"
-
 const MainPage = () => {
 
   useEffect(() => {
