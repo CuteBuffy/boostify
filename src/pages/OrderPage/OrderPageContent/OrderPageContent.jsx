@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import { Link, useSearchParams, useNavigate, Navigate } from "react-router-dom"
+import { useSearchParams } from "react-router-dom"
 
 import OrderPageCategory from "../OrderPageCategory/OrderPageCategory"
 import OrderPageSocial from "./OrderPageSocial/OrgerPageSocial"
@@ -11,9 +11,6 @@ import BoostifyLogo from "../../../icons/boostify_logo.png"
 const APIURL = import.meta.env.VITE_BOOSTIFY_API_URL;
 
 const OrderPageContent = () => {
-
-  const navigate = useNavigate();
-
   const [searchParams, setSearchParams] = useSearchParams();
   const activeService = searchParams.get("service")
 
@@ -22,7 +19,6 @@ const OrderPageContent = () => {
   const [socialLink, setSocialLink] = useState("");
   const [serviceType, setServiceType] = useState(null);
   const [categoryId, setCategoryId] = useState(null);
-  const [socialIcon, setSocialIcon] = useState(null);
 
   const [categoriesOpen, setCategoriesOpen] = useState(false);
 
@@ -30,7 +26,7 @@ const OrderPageContent = () => {
   const [categoriesData, setCategoriesData] = useState([])
 
   const [selectedCategory, setSelectedCategory] = useState(null);
-  
+
   const handleResetCategory = () => {
     setSelectedCategory(null);
     setSocialLink("");
@@ -104,15 +100,32 @@ const OrderPageContent = () => {
     setSocialLink(e.target.value)
   }
 
+  const validateUrl = (url) => {
+    if (!url.startsWith('http://') && !url.startsWith('https://')) {
+      if (!url.startsWith('t.me/') && !url.startsWith('tg://resolve?domain=')) {
+        url = 'https://' + url;
+      }
+    }
+
+    const urlPattern = /^(https?:\/\/(?:www\.)?[\w\d\-]+\.(com|org)(\/[^"]*)?|t\.me\/[\w_]+|tg:\/\/resolve\?domain=[\w\d_]+|instagram\.com\/[\w\d_.-]+|www\.instagram\.com\/[\w\d_.-]+|tiktok\.com\/@[\w\d_.-]+|vm\.tiktok\.com\/[\w\d]+)$/i;
+
+    return urlPattern.test(url);
+  };
+
   const handleAddToCart = () => {
     if (!activeService || !selectedCategory || !quantity || !price || !socialLink) {
-      alert("Please fill in all fields");
+      alert("Заповніть всі поля!");
       return;
     }
-  
+
+    if (!validateUrl(socialLink)) {
+      alert("Будь ласка, введіть коректне посилання!");
+      return;
+    }
+
     const selectedSocial = socialsData.find(social => social.name.toLowerCase() === activeService);
     const socialIcon = selectedSocial ? APIURL + selectedSocial.icon : null;
-  
+
     const newItem = {
       service: activeService,
       serviceType: serviceType,
@@ -122,15 +135,15 @@ const OrderPageContent = () => {
       categoryId: categoryId,
       socialIcon: socialIcon
     };
-  
+
     const existingCart = JSON.parse(localStorage.getItem("cart")) || [];
     const updatedCart = [...existingCart, newItem];
-  
+
     localStorage.setItem("cart", JSON.stringify(updatedCart));
 
     handleResetCategory();
-    alert("Додано до кошика!")
-  };  
+    alert("Додано до кошика!");
+  };
 
   return (
     <div className="order__page__content">
